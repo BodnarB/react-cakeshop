@@ -1,0 +1,15 @@
+.prod-card {
+    border: 1px solid black;
+    width: 200px;
+    padding: 0.5rem;
+}
+
+.prods-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* #add-radio {
+    display: none;
+} */
