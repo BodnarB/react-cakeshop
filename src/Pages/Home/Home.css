@@ -1,16 +1,49 @@
 h2 {
     font-size: 1.3rem;
     font-weight: 500;
-    padding: 2rem 1rem 1rem;
+    padding: 2rem 1rem;
     font-family: 'Merienda', cursive;
 }
 
+.intro-img-fade {
+    background-color: black;
+    position: relative;
+}
+
+.intro-cover-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.7;
+}
+
+.intro-cover-text {
+    position: absolute;
+    bottom: 0%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 0.5rem;
+    width: 100%;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    color: whitesmoke;
+    font-size: 1.1rem;
+    backdrop-filter: blur(3px);
+}
+
 .about-us {
-    background-color: antiquewhite;
+    background-color: #f8f8f8;
+}
+
+.history {
+    background-color: #efe9e2;
 }
 
 .home-text {
-    margin: 1rem;
+    margin: 0 1rem 1rem;
+    line-height: 1.3;
+    word-spacing: 1px;
 }
 
 img {
@@ -21,23 +54,12 @@ img {
 
     h2 {
         font-size: 1.5rem;
-        padding: 2rem 1rem;
-    }
-
-    .home-text {
-        margin: 1rem 2rem;
-    }
-
-    .max-width-home {
-        width: 90%;
-        margin: 0 auto;
     }
 
     .history-img {
-        box-shadow: none;
         border-radius: 1rem;
-        margin: 2rem auto;
-        width: 85%;
+        margin: 1rem auto;
+        width: 70%;
         max-width: 650px;
     }
 
@@ -45,19 +67,22 @@ img {
 
 @media (min-width: 768px) {
 
-    .about-us {
+    .intro-cover-text {
+        font-size: 1.3rem;
+    }
+
+    .max-width-about,
+    .max-width-history {
+        max-width: 1200px;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         padding: 1rem;
         gap: 1rem;
     }
 
-    .about-us .home-text {
-        margin: 1rem 0;
-    }
-
-    .about-us .max-width-home {
-        padding: 0;
+    .max-width-about {
+        flex-direction: row-reverse;
     }
 
     .intro-img {
@@ -66,27 +91,26 @@ img {
         margin: 0 auto;
     }
 
-    .max-width-home {
-        max-width: 1200px;
+    .history-img  {
+        width: 50%;
         margin: 0 auto;
-        padding: 2rem;
     }
 
 }
 
 @media (min-width: 992px) {
 
+    .intro-cover-img {
+        height: 250px;
+    }
+
     .about-us {
         gap: 2rem;
     }
 
-    .history-container {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .history-img {
-        width: 50%;
+    .max-width-about,
+    .max-width-history {
+        padding: 3rem 2rem;
+        gap: 2rem;
     }
 }
