@@ -6,6 +6,7 @@ import Footer from './Components/Footer/Footer';
 import { useState } from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import ProductsPage from './Pages/Products/ProductsPage';
+import Contact from './Pages/Contact/Contact';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route path='/products' element={<ProductsPage addFunc={addFunc} />} />
+          <Route path='/contact' element={<Contact />} />
           {/* {cart.map(item => <p key={uuidv4()}>{item.prodTitle}</p>)} */}
         </Routes>
         <Footer />
