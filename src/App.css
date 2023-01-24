@@ -1,0 +1,9 @@
+html {
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 290px;
+}
