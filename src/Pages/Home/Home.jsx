@@ -1,14 +1,11 @@
 import React from 'react'
 import './Home.css'
-import Products from '../../Components/Products/Products'
-import Header from '../../Components/Header/Header'
 import introImg from '../../Assets/photo-1491222825723-0b8308840432.avif'
 
 export default function Home({ addFunc }) {
 
   return (
     <>
-      <Header />
       <main className='home'>
         <div className='intro-img-fade'>
           <img className='intro-cover-img' src="https://images.pexels.com/photos/461431/pexels-photo-461431.jpeg" alt="" />
@@ -27,6 +24,10 @@ export default function Home({ addFunc }) {
             </div>
             <img className='intro-img' src={introImg} alt="" />
           </div>
+        </section>
+        <section className='best-sellers'>
+          <h2>Best seller products</h2>
+          <p>In progress...</p>
         </section>
         <section className='history'>
           <div className="max-width-history">
