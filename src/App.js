@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import ProductsPage from './Pages/Products/ProductsPage';
 import Contact from './Pages/Contact/Contact';
+import Cart from './Pages/Cart/Cart';
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
           <Route exact path='/' element={<Home />} />
           <Route path='/products' element={<ProductsPage addFunc={addFunc} />} />
           <Route path='/contact' element={<Contact />} />
-          {/* {cart.map(item => <p key={uuidv4()}>{item.prodTitle}</p>)} */}
+          <Route path='/cart' element={<Cart cart={cart} />} />
         </Routes>
         <Footer />
       </div>

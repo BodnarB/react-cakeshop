@@ -4,7 +4,7 @@ import bag from '../../Assets/bagfill.svg'
 import logo from '../../Assets/logo.png'
 import { Link } from 'react-router-dom'
 
-export default function Header({cartItemNum}) {
+export default function Header({ cartItemNum }) {
 
     const [showClass, setShowClass] = useState('')
     function menuClick() {
@@ -17,10 +17,12 @@ export default function Header({cartItemNum}) {
 
     return (
         <header>
-            <div className='header-cart-container'>
-                <img className='header-cart-img' src={bag} alt="" />
-                <p className='header-cart-text'>{cartItemNum}</p>
-            </div>
+            <Link to='/cart'>
+                <div className='header-cart-container'>
+                    <img className='header-cart-img' src={bag} alt="" />
+                    <p className='header-cart-text'>{cartItemNum}</p>
+                </div>
+            </Link>
             <Link className='logo-container' to="/">
                 <h1 className='logo-text'>Cake shop</h1>
                 <img className='logo-img' src={logo} alt="" />
