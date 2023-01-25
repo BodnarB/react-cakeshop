@@ -6,38 +6,32 @@ import PlusBtn from '../../Assets/plus-lg.svg'
 import MinusBtn from '../../Assets/dash-lg.svg'
 import DelBtn from '../../Assets/trash3.svg'
 
-export default function Cart({ cart }) {
-    console.log(cart)
+export default function Cart({ cart , minusItem, plusItem}) {
+
     return (
         <div className='cart-page'>
             <h2 className='cart-h2'>Cart</h2>
             <div className='cart-items-container'>
-                {cart.map(cart =>
+                {cart.map(cartItem =>
                     <div className='cart-prod-card' key={uuidv4()}>
-                        <img className='cart-prod-img' src={cart.imgSrc} alt="" />
+                        <img className='cart-prod-img' src={cartItem.imgSrc} alt="" />
                         <div className='cart-prod-container'>
-                            <div className='cart-prod-info'>
-                                <p>{cart.prodTitle}</p>
-                                <p>{cart.prodPrice} $</p>
-                            </div>
-                            <div className='prod-btn-container'>
-                                <div className='cart-btns'>
-                                    <img className='prod-qty-btn' src={MinusBtn} alt="" />
-                                    <p>{cart.prodQty}</p>
-                                    <img className='prod-qty-btn' src={PlusBtn} alt="" />
+                            <p className='cart-prod-info'>{cartItem.prodTitle}</p>
+                            <p className='cart-prod-info'>{cartItem.prodPrice} $</p>
+                            <div>
+                                <div className='prod-btn-container'>
+                                    <div className='cart-btns'>
+                                        <img className='prod-qty-btn' onClick={() => minusItem(cartItem)} src={MinusBtn} alt="" />
+                                        <p>{cartItem.totalprodQty}</p>
+                                        <img className='prod-qty-btn' onClick={() => plusItem(cartItem)} src={PlusBtn} alt="" />
+                                    </div>
+                                    <img src={DelBtn} alt="" />
                                 </div>
-                                <img src={DelBtn} alt="" />
                             </div>
-                            {/* <button className='prod-add-btn' disabled={prod.prodQty > 0}
-                                    onClick={() => {
-                                        prod.prodQty += 1
-                                        addFunc(prod)
-                                    }}>
-                                    {prod.prodQty > 0 ? <>Added to cart</> : <>Add to cart</>}
-                                </button> */}
                         </div>
-                    </div>)}
-            </div>
-        </div>
+                    </div>)
+                }
+            </div >
+        </div >
     )
 }

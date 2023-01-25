@@ -18,8 +18,35 @@ function App() {
   function addFunc(prod) {
     let cartArray = [...cart]
     cartArray.push(prod)
-    setcartItemNum(cartArray.reduce((acc, curr) => acc + curr.prodQty, 0))
+    findItem(cartArray, prod)
+    calcCartQty(cartArray)
     setCart(cartArray)
+  }
+
+  function calcCartQty(cartToCheck) {
+    setcartItemNum(cartToCheck.reduce((acc, curr) => acc + curr.totalprodQty, 0))
+  }
+
+  function findItem(array, prodToFind) {
+    array[array.findIndex((item) => item.prodTitle === prodToFind.prodTitle)].totalprodQty += 1
+  }
+
+  function minusItem(cartItem) {
+    if (cartItem.totalprodQty > 1) {
+      let cartArray = [...cart]
+      cartArray[cartArray.findIndex((prod) => prod.prodTitle === cartItem.prodTitle)].totalprodQty -= 1
+      setCart(cartArray)
+      calcCartQty(cart)
+    }
+  }
+
+  function plusItem(cartItem) {
+    if (cartItem.totalprodQty < 10) {
+      let cartArray = [...cart]
+      findItem(cartArray, cartItem)
+      setCart(cartArray)
+      calcCartQty(cart)
+    }
   }
 
   return (
@@ -30,7 +57,7 @@ function App() {
           <Route exact path='/' element={<Home />} />
           <Route path='/products' element={<ProductsPage addFunc={addFunc} />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/cart' element={<Cart cart={cart} />} />
+          <Route path='/cart' element={<Cart cart={cart} minusItem={minusItem} plusItem={plusItem} />} />
         </Routes>
         <Footer />
       </div>

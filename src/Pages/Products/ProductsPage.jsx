@@ -76,12 +76,9 @@ export default function ProductsPage({ addFunc }) {
                                     <p>{prod.prodTitle}</p>
                                     <p>{prod.prodPrice} $</p>
                                 </div>
-                                <button className='prod-add-btn' disabled={prod.prodQty > 0}
-                                    onClick={() => {
-                                        prod.prodQty += 1
-                                        addFunc(prod)
-                                    }}>
-                                    {prod.prodQty > 0 ? <>Added to cart</> : <>Add to cart</>}
+                                <button className='prod-add-btn' disabled={prod.totalprodQty > 0}
+                                    onClick={() => { addFunc(prod) }}>
+                                    {prod.totalprodQty > 0 ? <>Added to cart</> : <>Add to cart</>}
                                 </button>
                             </div>
                         </div>)}

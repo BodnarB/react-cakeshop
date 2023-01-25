@@ -9,9 +9,9 @@
 .cart-prod-card {
     width: 220px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.45);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     overflow: hidden;
-    height: 150px;
+    height: 165px;
     background-color: rgb(235, 235, 235);
 }
 
@@ -22,6 +22,8 @@
 }
 
 .cart-prod-img {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
     height: 55%;
     width: 100%;
     object-fit: cover;
@@ -34,19 +36,26 @@
     gap: 0.3rem;
     border-radius: 0.1rem;
     overflow: hidden;
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(255, 255, 255);
     font-weight: 500;
     color: black;
     width: 70px;
     outline: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
 }
 
 .prod-qty-btn {
-    background-color: rgb(201, 199, 199);
+    background-color: rgb(253, 183, 53);
     transition-duration: 0.2s;
-    width: 19px;
-    height: 19px;
+    width: 22px;
+    height: 22px;
+    padding: 0.2rem;
     display: block;
+}
+
+.prod-qty-btn:hover {
+    cursor: pointer;
+    background-color: rgb(238, 156, 3);
 }
 
 .cart-prod-container {
@@ -59,6 +68,6 @@
 
 .prod-btn-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 1rem;
 }
