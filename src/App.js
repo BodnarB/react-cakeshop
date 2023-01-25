@@ -15,20 +15,23 @@ function App() {
   const [cartItemNum, setcartItemNum] = useState(0)
   const [cart, setCart] = useState([])
 
+  function calcCartQty(cartToCheck) {
+    setcartItemNum(cartToCheck.reduce((acc, curr) => acc + curr.totalprodQty, 0))
+  }
+
+  function findItem(array, prodToFind) {
+    let idx=array.findIndex((item) => item.prodTitle === prodToFind.prodTitle)
+    array[idx].totalprodQty++
+    array[idx].totalPrice = array[idx].totalprodQty*array[idx].prodPrice
+    console.log(cart)
+  }
+
   function addFunc(prod) {
     let cartArray = [...cart]
     cartArray.push(prod)
     findItem(cartArray, prod)
     calcCartQty(cartArray)
     setCart(cartArray)
-  }
-
-  function calcCartQty(cartToCheck) {
-    setcartItemNum(cartToCheck.reduce((acc, curr) => acc + curr.totalprodQty, 0))
-  }
-
-  function findItem(array, prodToFind) {
-    array[array.findIndex((item) => item.prodTitle === prodToFind.prodTitle)].totalprodQty += 1
   }
 
   function minusItem(cartItem) {
