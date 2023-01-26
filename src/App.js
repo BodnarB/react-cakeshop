@@ -63,7 +63,7 @@ function App() {
       <div className="App">
         <Header cartItemNum={cartItemNum} />
         <Routes>
-          <Route exact path='/' element={<Home />} />
+          <Route exact path='/' element={<Home addFunc={addFunc}/>} />
           <Route path='/products' element={<ProductsPage addFunc={addFunc} />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/cart' element={<Cart cart={cart} minusItem={minusItem} plusItem={plusItem} />} />

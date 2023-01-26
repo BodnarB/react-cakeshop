@@ -4,6 +4,7 @@ import ProductList from '../../Products.json'
 import wave from '../../Assets/wave.svg'
 import './ProductsPage.css'
 import arrowIcon from '../../Assets/arrow-down.svg'
+import ProductCard from '../../Components/ProductCard/ProductCard';
 
 export default function ProductsPage({ addFunc }) {
 
@@ -68,20 +69,7 @@ export default function ProductsPage({ addFunc }) {
                     </ul>
                 </div>
                 <div className='prods-container'>
-                    {sortingRender.map(prod =>
-                        <div className='prod-card' key={uuidv4()}>
-                            <img className='prod-img' src={prod.imgSrc} alt="" />
-                            <div className='prod-card-container'>
-                                <div className='prod-info'>
-                                    <p>{prod.prodTitle}</p>
-                                    <p>{prod.prodPrice} $</p>
-                                </div>
-                                <button className='prod-add-btn' disabled={prod.totalprodQty > 0}
-                                    onClick={() => { addFunc(prod) }}>
-                                    {prod.totalprodQty > 0 ? <>Added to cart</> : <>Add to cart</>}
-                                </button>
-                            </div>
-                        </div>)}
+                    {sortingRender.map(prod => <ProductCard prod={prod} addFunc={addFunc} key={uuidv4()} />)}
                 </div>
             </div>
         </div>
