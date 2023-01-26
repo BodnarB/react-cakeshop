@@ -13,9 +13,8 @@ export default function BestSellers({ addFunc }) {
             <h2>Best seller products</h2>
             <div className='best-sellers-prods'>
                 {ProductList.slice(2, 6).map(prod => <ProductCard prod={prod} addFunc={addFunc} key={uuidv4()} />)}
-                <Link className='btn-a' to='/products'><button className='all-prods-btn'>All products <img className='arrow-icon' src={Arrow} alt="" /></button></Link>
             </div>
-            <Link></Link>
+            <Link className='btn-a' to='/products'><button className='all-prods-btn'>All products <img className='arrow-icon' src={Arrow} alt="" /></button></Link>
         </div>
     )
 }
