@@ -37,3 +37,14 @@
     width: fit-content;
     margin: 0 auto;
 }
+
+@media (min-width: 576px) {
+
+    .all-prods-btn {
+        font-size: 1.15rem;
+        font-weight: 400;
+        width: 220px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    }
+
+}
