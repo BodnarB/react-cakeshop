@@ -1,14 +1,39 @@
-.best-sellers {
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 1rem;
-}
-
 .best-sellers-prods {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
     max-width: 1200px;
-    margin: 1rem auto 2rem;
+    margin: 1rem auto;
+}
+
+.arrow-icon {
+    height: 15px;
+}
+
+.all-prods-btn {
+    padding: 0.6rem 1.5rem;
+    max-width: 250px;
+    justify-content: center;
+    background-color: #a12447;
+    color: #ffffff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    margin: 1rem auto 0;
+    border-radius: 1rem;
+    transition-duration: 0.3s;
+}
+
+.all-prods-btn:hover {
+    background-color: #770f2d;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.btn-a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
 }

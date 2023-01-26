@@ -85,3 +85,8 @@
     text-align: center;
     margin: 1rem 0;
 }
+
+.best-sellers-cart {
+    background-color: rgb(235, 230, 221);
+    padding: 2rem;
+}

@@ -39,6 +39,7 @@
 }
 
 .prod-add-btn {
+    font-size: 1rem;
     background-color: #ffcb52;
     box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;

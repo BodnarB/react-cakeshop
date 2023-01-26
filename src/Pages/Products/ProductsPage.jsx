@@ -32,6 +32,7 @@ export default function ProductsPage({ addFunc }) {
     function setSelect(e) {
         setSelected(e.target.innerText)
         setShowSelect('hide')
+        setArrow('')
     }
 
     useEffect(() => {
@@ -45,7 +46,6 @@ export default function ProductsPage({ addFunc }) {
         else if (selected === 'A-Z') {
             sortingRendering = ProductsAZ
         }
-        setArrow('')
         setSortingRender(sortingRendering)
     }, [selected])
 

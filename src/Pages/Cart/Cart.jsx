@@ -2,12 +2,13 @@ import React from 'react'
 import './Cart.css'
 import { v4 as uuidv4 } from 'uuid'
 import { Link } from 'react-router-dom'
+import BestSellers from '../../Components/BestSellers/BestSellers'
 import EmptyCartImg from '../../Assets/emptycart.png'
 import PlusBtn from '../../Assets/plus-lg.svg'
 import MinusBtn from '../../Assets/dash-lg.svg'
 import DelBtn from '../../Assets/trash3.svg'
 
-export default function Cart({ cart, minusItem, plusItem }) {
+export default function Cart({ cart, minusItem, plusItem, addFunc }) {
     return (
         <div className='cart-page'>
             <h2 className='cart-h2'>Cart</h2>
@@ -39,6 +40,9 @@ export default function Cart({ cart, minusItem, plusItem }) {
                     <p className='empty-cart'>Your cart is empty, check out our fancy cakes.</p>
                 </div>
             }
+            <section className='best-sellers-cart'>
+                <BestSellers addFunc={addFunc} />
+            </section>
         </div >
     )
 }
