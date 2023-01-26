@@ -17,7 +17,7 @@ export default function Cart({ cart , minusItem, plusItem}) {
                         <img className='cart-prod-img' src={cartItem.imgSrc} alt="" />
                         <div className='cart-prod-container'>
                             <p className='cart-prod-info'>{cartItem.prodTitle}</p>
-                            <p className='cart-prod-info'>{cartItem.prodPrice} $</p>
+                            <p className='cart-prod-info'>{cartItem.totalPrice} $</p>
                             <div>
                                 <div className='prod-btn-container'>
                                     <div className='cart-btns'>
