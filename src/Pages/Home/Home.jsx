@@ -26,7 +26,9 @@ export default function Home({ addFunc }) {
             <img className='intro-img' src={introImg} alt="" />
           </div>
         </section>
-        <BestSellers addFunc={addFunc}/>
+        <section className='best-sellers-home'>
+          <BestSellers addFunc={addFunc} />
+        </section>
         <section className='history'>
           <div className="max-width-history">
             <div>

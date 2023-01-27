@@ -12,7 +12,7 @@
 }
 
 .all-prods-btn {
-    padding: 0.6rem 1.5rem;
+    padding: 0.5rem 1.3rem;
     max-width: 250px;
     justify-content: center;
     background-color: #a12447;
@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     gap: 0.2rem;
-    margin: 1rem auto 0;
+    margin: 2rem auto;
     border-radius: 1rem;
     transition-duration: 0.3s;
 }
@@ -43,7 +43,7 @@
     .all-prods-btn {
         font-size: 1.15rem;
         font-weight: 400;
-        width: 220px;
+        width: 200px;
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     }
 

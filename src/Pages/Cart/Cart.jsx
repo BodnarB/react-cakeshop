@@ -11,7 +11,9 @@ import DelBtn from '../../Assets/trash3.svg'
 export default function Cart({ cart, minusItem, plusItem, addFunc }) {
     return (
         <div className='cart-page'>
-            <h2 className='cart-h2'>Cart</h2>
+            <div className='cart-header'>
+                <h2 className='cart-h2'>Cart</h2>
+            </div>
             {cart.length > 0 &&
                 <div className='cart-items-container'>
                     {cart.map(cartItem =>
@@ -41,7 +43,9 @@ export default function Cart({ cart, minusItem, plusItem, addFunc }) {
                 </div>
             }
             <section className='best-sellers-cart'>
-                <BestSellers addFunc={addFunc} />
+                <div className='best-sellers-max-width '>
+                    <BestSellers addFunc={addFunc} />
+                </div>
             </section>
         </div >
     )

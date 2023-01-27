@@ -50,6 +50,12 @@ img {
     display: block;
 }
 
+.best-sellers-home {
+    padding: 1rem 1rem 0.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 @media (min-width: 576px) {
 
     h2 {
