@@ -13,10 +13,12 @@ import Cart from './Pages/Cart/Cart';
 function App() {
 
   const [cartItemNum, setcartItemNum] = useState(0)
+  const [cartTotalPrice, setCartTotalPrice] = useState(0)
   const [cart, setCart] = useState([])
 
   function calcCartQty(cartToCheck) {
     setcartItemNum(cartToCheck.reduce((acc, curr) => acc + curr.totalprodQty, 0))
+    setCartTotalPrice(cartToCheck.reduce((acc, curr) => acc + curr.totalPrice, 0))
   }
 
   useEffect(() => {
@@ -66,7 +68,8 @@ function App() {
           <Route exact path='/' element={<Home addFunc={addFunc} />} />
           <Route path='/products' element={<ProductsPage addFunc={addFunc} />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/cart' element={<Cart cart={cart} minusItem={minusItem} plusItem={plusItem} addFunc={addFunc} />} />
+          <Route path='/cart' element={<Cart cart={cart} minusItem={minusItem} plusItem={plusItem} 
+          addFunc={addFunc} cartItemNum={cartItemNum} cartTotalPrice={cartTotalPrice}/>} />
         </Routes>
         <Footer />
       </div>
