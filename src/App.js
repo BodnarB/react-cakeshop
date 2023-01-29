@@ -16,13 +16,9 @@ function App() {
   const [cartTotalPrice, setCartTotalPrice] = useState(0)
   const [cart, setCart] = useState([])
 
-  function calcCartQty(cartToCheck) {
-    setcartItemNum(cartToCheck.reduce((acc, curr) => acc + curr.totalprodQty, 0))
-    setCartTotalPrice(cartToCheck.reduce((acc, curr) => acc + curr.totalPrice, 0).toFixed(1))
-  }
-
   useEffect(() => {
-    calcCartQty(cart)
+    setcartItemNum(cart.reduce((acc, curr) => acc + curr.totalprodQty, 0))
+    setCartTotalPrice(cart.reduce((acc, curr) => acc + curr.totalPrice, 0).toFixed(1))
   }, [cart])
 
   function addOrRemoveFromCart(array, prodToFind, quantity) {
@@ -73,7 +69,7 @@ function App() {
 
   return (
     <HashRouter>
-      <ScrollToTop/>
+      <ScrollToTop />
       <div className="App">
         <Header cartItemNum={cartItemNum} />
         <Routes>
