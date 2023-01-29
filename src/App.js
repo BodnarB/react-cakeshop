@@ -18,7 +18,7 @@ function App() {
 
   function calcCartQty(cartToCheck) {
     setcartItemNum(cartToCheck.reduce((acc, curr) => acc + curr.totalprodQty, 0))
-    setCartTotalPrice(cartToCheck.reduce((acc, curr) => acc + curr.totalPrice, 0))
+    setCartTotalPrice(cartToCheck.reduce((acc, curr) => acc + curr.totalPrice, 0).toFixed(1))
   }
 
   useEffect(() => {

@@ -1,5 +1,6 @@
 .cart-header {
-    background-color: #9b445c;
+    background-color: #9B445C;
+    background-image: url('../../Assets/hollowed-boxes.svg');
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.068);
 }
 
@@ -8,31 +9,35 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 1.4rem 1rem;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 
 .cart-items-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: fit-content;
+    max-width: 405px;
+    width: 100%;
 }
 
 .cart-flex {
-    width: fit-content;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
-    padding: 2rem;
+    padding: 2rem 1rem;
 }
 
 .cart-prod-card {
-    width: 220px;
+    height: 95px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.45);
     border-radius: 0.5rem;
     overflow: hidden;
-    height: 165px;
     background-color: rgb(235, 235, 235);
+    display: flex;
 }
 
 .cart-prod-info {
@@ -44,8 +49,7 @@
 .cart-prod-img {
     border-radius: 0.5rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
-    height: 55%;
-    width: 100%;
+    width: 40%;
     object-fit: cover;
 }
 
@@ -81,7 +85,7 @@
 .cart-prod-container {
     padding: 0.4rem;
     display: flex;
-    height: 45%;
+    width: 60%;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -123,7 +127,6 @@
     gap: 0.2rem;
     justify-content: space-between;
     padding: 1rem;
-    width: 275px;
     border-radius: 0.2rem;
     font-weight: 500;
     background-color: rgba(0, 0, 0, 0.1);
@@ -137,7 +140,6 @@
 
 .checkout-btn {
     display: block;
-    width: 275px;
     padding: 0.5rem 1rem;
     border-radius: 0.2rem;
     background-color: #ffa631;
@@ -157,11 +159,27 @@
     flex-direction: column;
     gap: 0.5rem;
     margin: 0 auto;
-    width: fit-content;
+    width: 100%;
+    max-width: 405px;
 }
 
 .del-btn:hover {
     cursor: pointer;
     filter: drop-shadow(0 0 1px rgba(255, 0, 0, 0.6));
     transition-duration: 0.3s;
+}
+
+@media (min-width: 768px) {
+
+    .cart-flex {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .sum-container {
+        width: 405px;
+        margin: 0;
+    }
+
 }
