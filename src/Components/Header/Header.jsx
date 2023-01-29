@@ -19,16 +19,17 @@ export default function Header({ cartItemNum }) {
         <header>
             <div className='header-max-width'>
                 <div className='header-left-container'>
+                    <Link className='logo-container' to="/">
+                        <img className='logo-img' src={logo} alt="" />
+                        <h1 className='logo-text'>Cake shop</h1>
+                    </Link>
                     <Link to='/cart'>
                         <div className='header-cart-container'>
-                            <img className='header-cart-img' src={bag} alt="" />
                             <p className='header-cart-text'>{cartItemNum}</p>
+                            <img className='header-cart-img' src={bag} alt="" />
                         </div>
                     </Link>
-                    <Link className='logo-container' to="/">
-                        <h1 className='logo-text'>Cake shop</h1>
-                        <img className='logo-img' src={logo} alt="" />
-                    </Link>
+
                 </div>
                 <nav>
                     <ul className={`nav-ul ${showClass}`}>

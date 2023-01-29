@@ -28,6 +28,7 @@
     color: rgb(27, 27, 27);
     height: 100%;
     justify-content: space-between;
+    letter-spacing: 0.03rem;
 }
 
 .prod-card-container {

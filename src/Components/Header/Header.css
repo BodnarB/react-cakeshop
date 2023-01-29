@@ -17,10 +17,10 @@ header {
     padding: 0.5rem;
 }
 
-.header-left-container{
+.header-left-container {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .header-cart-container {
@@ -152,7 +152,7 @@ header {
 @media (min-width: 768px) {
 
     .header-max-width {
-        padding: 0 2rem;
+        padding: 0.5rem 1rem;
     }
 
     .nav-ul {
@@ -168,21 +168,20 @@ header {
 
     .nav-link {
         border: none;
-        border-radius: 0.9rem;
-        padding: 0.5rem 0;
+        border-radius: 0.4rem;
+        padding: 0 0.4rem;
+        font-weight: 500;
+        border-right: 2px solid #75324577;
+        border-left: 2px solid #75324570;
     }
 
     .hamburger-button {
         display: none;
     }
 
-    .header-left-container {
-        flex-direction: row-reverse;
-        gap: 0.5rem;
-    }
-
-    .logo-container {
-        flex-direction: row-reverse;
+    .nav-link:hover {
+        background-color: transparent;
+        color: #9d2a51;
     }
 
 }
