@@ -8,7 +8,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import ProductsPage from './Pages/Products/ProductsPage';
 import Contact from './Pages/Contact/Contact';
 import Cart from './Pages/Cart/Cart';
-
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {
 
@@ -73,6 +73,7 @@ function App() {
 
   return (
     <HashRouter>
+      <ScrollToTop/>
       <div className="App">
         <Header cartItemNum={cartItemNum} />
         <Routes>
