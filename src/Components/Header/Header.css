@@ -1,14 +1,26 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #fffbf5;
     color: #9b445c;
-    padding: 0.5rem;
     position: sticky;
     top: 0;
     z-index: 10;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.header-max-width {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+.header-left-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .header-cart-container {
@@ -49,7 +61,7 @@ header {
 }
 
 .logo-img {
-    max-height: 30px;
+    max-height: 27px;
 }
 
 .logo-container {
@@ -135,4 +147,42 @@ header {
 .hamburger-button:hover .hamburger-lines::after {
     background-color: #3f2424;
     transition-duration: 0.3s;
+}
+
+@media (min-width: 768px) {
+
+    .header-max-width {
+        padding: 0 2rem;
+    }
+
+    .nav-ul {
+        visibility: visible;
+        position: relative;
+        opacity: 1;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        top: 0;
+        gap: 1rem;
+    }
+
+    .nav-link {
+        border: none;
+        border-radius: 0.9rem;
+        padding: 0.5rem 0;
+    }
+
+    .hamburger-button {
+        display: none;
+    }
+
+    .header-left-container {
+        flex-direction: row-reverse;
+        gap: 0.5rem;
+    }
+
+    .logo-container {
+        flex-direction: row-reverse;
+    }
+
 }

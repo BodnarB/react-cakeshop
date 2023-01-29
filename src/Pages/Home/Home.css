@@ -94,7 +94,10 @@ img {
     .intro-img {
         width: 50%;
         border-radius: 1rem;
-        margin: 0 auto;
+    }
+
+    .home-text {
+        margin: 0 0 1rem 0;
     }
 
     .history-img  {

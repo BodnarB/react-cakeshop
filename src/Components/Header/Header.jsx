@@ -17,26 +17,30 @@ export default function Header({ cartItemNum }) {
 
     return (
         <header>
-            <Link to='/cart'>
-                <div className='header-cart-container'>
-                    <img className='header-cart-img' src={bag} alt="" />
-                    <p className='header-cart-text'>{cartItemNum}</p>
+            <div className='header-max-width'>
+                <div className='header-left-container'>
+                    <Link to='/cart'>
+                        <div className='header-cart-container'>
+                            <img className='header-cart-img' src={bag} alt="" />
+                            <p className='header-cart-text'>{cartItemNum}</p>
+                        </div>
+                    </Link>
+                    <Link className='logo-container' to="/">
+                        <h1 className='logo-text'>Cake shop</h1>
+                        <img className='logo-img' src={logo} alt="" />
+                    </Link>
                 </div>
-            </Link>
-            <Link className='logo-container' to="/">
-                <h1 className='logo-text'>Cake shop</h1>
-                <img className='logo-img' src={logo} alt="" />
-            </Link>
-            <nav>
-                <ul className={`nav-ul ${showClass}`}>
-                    <li onClick={hideMenu}><Link className='nav-link' to="/">Home</Link></li>
-                    <li onClick={hideMenu}><Link className='nav-link' to="/products">Products</Link></li>
-                    <li onClick={hideMenu}><Link className='nav-link' to="/contact">Contact</Link></li>
-                </ul>
-                <div onClick={menuClick} className='hamburger-button'>
-                    <span className='hamburger-lines'></span>
-                </div>
-            </nav>
+                <nav>
+                    <ul className={`nav-ul ${showClass}`}>
+                        <li onClick={hideMenu}><Link className='nav-link' to="/">Home</Link></li>
+                        <li onClick={hideMenu}><Link className='nav-link' to="/products">Products</Link></li>
+                        <li onClick={hideMenu}><Link className='nav-link' to="/contact">Contact</Link></li>
+                    </ul>
+                    <div onClick={menuClick} className='hamburger-button'>
+                        <span className='hamburger-lines'></span>
+                    </div>
+                </nav>
+            </div>
         </header>
     )
 }
