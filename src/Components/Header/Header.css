@@ -37,7 +37,7 @@ header {
 }
 
 .header-cart-img {
-    height: 19px;
+    height: 18px;
 }
 
 .header-cart-text {
@@ -45,7 +45,7 @@ header {
     position: absolute;
     font-size: 0.7rem;
     bottom: -8px;
-    right: -15px;
+    right: -16px;
     width: 21px;
     height: 21px;
     padding: 0.55rem;
