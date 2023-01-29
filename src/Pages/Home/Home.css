@@ -68,6 +68,10 @@ img {
         width: 70%;
         max-width: 650px;
     }
+    
+    .max-width-history {
+        padding-bottom: 0.5rem;
+    }
 
 }
 
@@ -110,7 +114,7 @@ img {
 @media (min-width: 992px) {
 
     .intro-cover-img {
-        height: 250px;
+        height: 330px;
     }
 
     .about-us {

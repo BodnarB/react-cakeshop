@@ -170,9 +170,10 @@ header {
         border: none;
         border-radius: 0.4rem;
         padding: 0 0.4rem;
-        font-weight: 500;
-        border-right: 2px solid #75324577;
-        border-left: 2px solid #75324570;
+        font-size: 1.03rem;
+        color: #272727;
+        border-right: 2px solid rgba(117, 50, 69, 0.45);
+        border-left: 2px solid rgba(117, 50, 69, 0.45);
     }
 
     .hamburger-button {

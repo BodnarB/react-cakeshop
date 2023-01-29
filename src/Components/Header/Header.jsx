@@ -23,7 +23,7 @@ export default function Header({ cartItemNum }) {
                         <img className='logo-img' src={logo} alt="" />
                         <h1 className='logo-text'>Cake shop</h1>
                     </Link>
-                    <Link to='/cart'>
+                    <Link to='/cart' onClick={hideMenu}>
                         <div className='header-cart-container'>
                             <p className='header-cart-text'>{cartItemNum}</p>
                             <img className='header-cart-img' src={bag} alt="" />
