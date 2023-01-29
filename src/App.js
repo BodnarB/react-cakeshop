@@ -30,8 +30,13 @@ function App() {
     if (quantity > 0) {
       array[idx].totalprodQty++
     }
-    else {
+    else if (quantity === 0) {
       array[idx].totalprodQty--
+    }
+    else {
+      array[idx].totalprodQty = 0
+      array.splice(idx, 1)
+      return setCart([...array])
     }
     array[idx].totalPrice = array[idx].totalprodQty * array[idx].prodPrice
     setCart([...array])
@@ -60,6 +65,12 @@ function App() {
     }
   }
 
+  function delItem(cartItem) {
+    let cartArray = [...cart]
+    addOrRemoveFromCart(cartArray, cartItem, -1)
+    setCart(cartArray)
+  }
+
   return (
     <HashRouter>
       <div className="App">
@@ -68,8 +79,8 @@ function App() {
           <Route exact path='/' element={<Home addFunc={addFunc} />} />
           <Route path='/products' element={<ProductsPage addFunc={addFunc} />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/cart' element={<Cart cart={cart} minusItem={minusItem} plusItem={plusItem} 
-          addFunc={addFunc} cartItemNum={cartItemNum} cartTotalPrice={cartTotalPrice}/>} />
+          <Route path='/cart' element={<Cart cart={cart} minusItem={minusItem} plusItem={plusItem}
+            addFunc={addFunc} cartItemNum={cartItemNum} cartTotalPrice={cartTotalPrice} delItem={delItem} />} />
         </Routes>
         <Footer />
       </div>
