@@ -9,11 +9,8 @@ import ProductCard from '../../Components/ProductCard/ProductCard';
 export default function ProductsPage({ addFunc }) {
 
     const [selected, setSelected] = useState('Price: Low to high')
-    const [showSelect, setShowSelect] = useState('hide')
-
     const [page, setPage] = useState(1)
     const [chunkSize, setChunkSize] = useState(8)
-
     const [showList, setShowList] = useState(false)
     const [arrowClass, setArrowClass] = useState('')
     const [sortList, setSortList] = useState(false)
@@ -37,16 +34,14 @@ export default function ProductsPage({ addFunc }) {
         setarrowClassInSorting(sortList ? '' : 'rotated')
     }
 
+    function sortingBtn(e) {
+        setSelected(e.target.innerText)
+    }
+
     function prodsNumOnPageSelect() {
         setShowList(!showList)
         setArrowClass(showList ? '' : 'rotated')
     }
-
-    // function setSelect(e) {
-    //     setSelected(e.target.innerText)
-    //     setShowSelect('hide')
-    //     setArrow('')
-    // }
 
     useEffect(() => {
         let sortingRendering = ''
@@ -96,9 +91,9 @@ export default function ProductsPage({ addFunc }) {
                         </button>
                         {sortList && (
                             <ul className={`products-sorting`}>
-                                <li onClick={prodsSortingSelect} className='sorting-mode'>Price: Low to high</li>
-                                <li onClick={prodsSortingSelect} className='sorting-mode'>Price: High to low</li>
-                                <li onClick={prodsSortingSelect} className='sorting-mode'>A-Z</li>
+                                <li onClick={(e) => { prodsSortingSelect(); sortingBtn(e) }} className='sorting-mode'>Price: Low to high</li>
+                                <li onClick={(e) => { prodsSortingSelect(); sortingBtn(e) }} className='sorting-mode'>Price: High to low</li>
+                                <li onClick={(e) => { prodsSortingSelect(); sortingBtn(e) }} className='sorting-mode'>A-Z</li>
                             </ul>
                         )}
                     </div>
