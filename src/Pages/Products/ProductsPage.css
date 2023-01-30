@@ -160,19 +160,25 @@
     align-items: center;
     font-weight: 600;
     font-size: 0.9rem;
-    transition-duration: 0.25s;
+    transition-duration: 0.2s;
 }
 
 .page-arrow:hover,
 .page-number:hover {
     cursor: pointer;
     background-color: bisque;
-    transition-duration: 0.25s;
+    transition-duration: 0.2s;
 }
 
 .page-arrow:disabled:hover {
     background-color: rgba(239, 239, 239, 0.3);
     cursor: default;
+}
+
+.selected-page {
+    background-color: rgb(253, 192, 78);
+    border: 1px solid rgba(255, 255, 255, 0.918);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width:992px) {

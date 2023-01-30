@@ -59,6 +59,7 @@ export default function ProductsPage({ addFunc }) {
 
     function pageNumber(i) {
         setPage(i)
+
     }
 
     return (
@@ -90,7 +91,9 @@ export default function ProductsPage({ addFunc }) {
                     </button>
                     <ul className='page-nums'>
                         {createArray(Math.ceil(sortingRender.length / 8)).map(i =>
-                            <li onClick={() => pageNumber(i)} className='page-number' key={i}>{i}</li>)}
+                            <li onClick={() => pageNumber(i)}
+                                className={`page-number ${i === page ? 'selected-page' : ''}`}
+                                key={i}>{i}</li>)}
                     </ul>
                     <button onClick={() => setPage(page + 1)} className='page-arrow arrow-right'
                         disabled={page === Math.ceil(sortingRender.length / chunkSize)}>
