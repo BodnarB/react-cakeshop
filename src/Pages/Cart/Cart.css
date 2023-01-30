@@ -180,6 +180,8 @@
     .sum-container {
         width: 300px;
         margin: 0;
+        position: sticky;
+        top: 80px;
     }
 
 }
