@@ -11,6 +11,8 @@ export default function ProductsPage({ addFunc }) {
     const [selected, setSelected] = useState('Price: Low to high')
     const [showSelect, setShowSelect] = useState('hide')
     const [arrow, setArrow] = useState('')
+    const [page, setPage] = useState(1)
+    const chunkSize = 8;
     let ProductsAscending = [...ProductList].sort((a, b) => a.prodPrice - b.prodPrice)
     let ProductsDescending = [...ProductList].sort((a, b) => b.prodPrice - a.prodPrice)
     let ProductsAZ = [...ProductList].sort((a, b) => {
@@ -55,6 +57,10 @@ export default function ProductsPage({ addFunc }) {
         });
     }
 
+    function pageNumber(i) {
+        setPage(i)
+    }
+
     return (
         <div className='products-page'>
             <div className='products-cover-container'>
@@ -75,14 +81,21 @@ export default function ProductsPage({ addFunc }) {
                     </ul>
                 </div>
                 <div className='prods-container'>
-                    {sortingRender.slice(0, 8).map(prod => <ProductCard prod={prod} addFunc={addFunc} key={uuidv4()} />)}
+                    {sortingRender.slice((page - 1) * chunkSize, page * chunkSize).map(prod =>
+                        <ProductCard prod={prod} addFunc={addFunc} key={uuidv4()} />)}
                 </div>
                 <div className='page-select'>
-                    <img className='arrow-left page-arrow' src={arrowIcon} alt="" />
+                    <button onClick={() => setPage(page - 1)} className='page-arrow arrow-left' disabled={page === 1}>
+                        <img src={arrowIcon} alt="" />
+                    </button>
                     <ul className='page-nums'>
-                        {createArray(Math.ceil(sortingRender.length / 8)).map(i => <li className='page-number' key={i}>{i}</li>)}
+                        {createArray(Math.ceil(sortingRender.length / 8)).map(i =>
+                            <li onClick={() => pageNumber(i)} className='page-number' key={i}>{i}</li>)}
                     </ul>
-                    <img className='arrow-right page-arrow' src={arrowIcon} alt="" />
+                    <button onClick={() => setPage(page + 1)} className='page-arrow arrow-right'
+                        disabled={page === Math.ceil(sortingRender.length / chunkSize)}>
+                        <img src={arrowIcon} alt="" />
+                    </button>
                 </div>
             </div>
         </div>

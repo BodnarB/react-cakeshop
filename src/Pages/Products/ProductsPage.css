@@ -129,11 +129,13 @@
 }
 
 .page-arrow {
-    background-color: rgb(245, 194, 101);
     border-radius: 50%;
     height: 18px;
     width: 18px;
     transition-duration: 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .page-select {
@@ -166,6 +168,11 @@
     cursor: pointer;
     background-color: bisque;
     transition-duration: 0.25s;
+}
+
+.page-arrow:disabled:hover {
+    background-color: rgba(239, 239, 239, 0.3);
+    cursor: default;
 }
 
 @media (min-width:992px) {

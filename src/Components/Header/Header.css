@@ -124,12 +124,13 @@ header {
     display: block;
     padding: 0.5rem;
     border-bottom: 1px solid #00000033;
+    transition-duration: 0.3s;
 }
 
 .nav-link:hover {
     background-color: #9b445c;
     color: white;
-    transition-duration: 0.2s;
+    transition-duration: 0.4s;
 }
 
 .hamburger-button {
