@@ -118,6 +118,55 @@
     margin: 1rem auto;
 }
 
+.arrow-left {
+    transform: rotate(90deg);
+    padding-top: 0.1rem;
+}
+
+.arrow-right {
+    transform: rotate(-90deg);
+    padding-top: 0.1rem;
+}
+
+.page-arrow {
+    background-color: rgb(245, 194, 101);
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    transition-duration: 0.25s;
+}
+
+.page-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.page-nums {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.page-number {
+    background-color: orange;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition-duration: 0.25s;
+}
+
+.page-arrow:hover,
+.page-number:hover {
+    cursor: pointer;
+    background-color: bisque;
+    transition-duration: 0.25s;
+}
 
 @media (min-width:992px) {
     .prods-container {

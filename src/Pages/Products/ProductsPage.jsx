@@ -49,6 +49,12 @@ export default function ProductsPage({ addFunc }) {
         setSortingRender(sortingRendering)
     }, [selected])
 
+    function createArray(number) {
+        return new Array(number).fill().map(function (_, i) {
+            return i + 1;
+        });
+    }
+
     return (
         <div className='products-page'>
             <div className='products-cover-container'>
@@ -69,7 +75,14 @@ export default function ProductsPage({ addFunc }) {
                     </ul>
                 </div>
                 <div className='prods-container'>
-                    {sortingRender.map(prod => <ProductCard prod={prod} addFunc={addFunc} key={uuidv4()} />)}
+                    {sortingRender.slice(0, 8).map(prod => <ProductCard prod={prod} addFunc={addFunc} key={uuidv4()} />)}
+                </div>
+                <div className='page-select'>
+                    <img className='arrow-left page-arrow' src={arrowIcon} alt="" />
+                    <ul className='page-nums'>
+                        {createArray(Math.ceil(sortingRender.length / 8)).map(i => <li className='page-number' key={i}>{i}</li>)}
+                    </ul>
+                    <img className='arrow-right page-arrow' src={arrowIcon} alt="" />
                 </div>
             </div>
         </div>

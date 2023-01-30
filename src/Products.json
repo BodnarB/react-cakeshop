@@ -54,5 +54,61 @@
             "prodPrice": "12.9",
             "totalprodQty": 0,
             "totalPrice": 0
+        },
+        {
+            "imgSrc": "/Assets/Products/009.avif",
+            "prodTitle": "Moonstone Delight Cake",
+            "prodPrice": "12",
+            "totalprodQty": 0,
+            "totalPrice": 0
+        },
+        {
+            "imgSrc": "/Assets/Products/010.avif",
+            "prodTitle": "Dragonfire Spice Cake",
+            "prodPrice": "9",
+            "totalprodQty": 0,
+            "totalPrice": 0
+        },
+        {
+            "imgSrc": "/Assets/Products/011.avif",
+            "prodTitle": "Starry Night Cake",
+            "prodPrice": "9",
+            "totalprodQty": 0,
+            "totalPrice": 0
+        },
+        {
+            "imgSrc": "/Assets/Products/012.avif",
+            "prodTitle": "Funfetti Cake",
+            "prodPrice": "9",
+            "totalprodQty": 0,
+            "totalPrice": 0
+        },
+        {
+            "imgSrc": "/Assets/Products/013.avif",
+            "prodTitle": "Midnight Cake",
+            "prodPrice": "11",
+            "totalprodQty": 0,
+            "totalPrice": 0
+        },
+        {
+            "imgSrc": "/Assets/Products/014.avif",
+            "prodTitle": "Velvet Dream Cake",
+            "prodPrice": "15",
+            "totalprodQty": 0,
+            "totalPrice": 0
+        },
+        {
+            "imgSrc": "/Assets/Products/015.avif",
+            "prodTitle": "Magic Morsel Cake",
+            "prodPrice": "12.5",
+            "totalprodQty": 0,
+            "totalPrice": 0
+        },
+        {
+            "imgSrc": "/Assets/Products/016.avif",
+            "prodTitle": "Vanilla Cake",
+            "prodPrice": "12.5",
+            "totalprodQty": 0,
+            "totalPrice": 0
         }
     ]

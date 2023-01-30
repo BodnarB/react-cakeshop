@@ -11,7 +11,7 @@ import Cart from './Pages/Cart/Cart';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {
-
+  
   const [cartItemNum, setcartItemNum] = useState(0)
   const [cartTotalPrice, setCartTotalPrice] = useState(0)
   const [cart, setCart] = useState([])
