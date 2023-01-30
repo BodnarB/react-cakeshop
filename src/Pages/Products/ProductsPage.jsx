@@ -12,7 +12,8 @@ export default function ProductsPage({ addFunc }) {
     const [showSelect, setShowSelect] = useState('hide')
     const [arrow, setArrow] = useState('')
     const [page, setPage] = useState(1)
-    const chunkSize = 8
+    const [chunkSize, setChunkSize] = useState(8)
+    const [showList, setShowList] = useState(false);
     let ProductsAscending = [...ProductList].sort((a, b) => a.prodPrice - b.prodPrice)
     let ProductsDescending = [...ProductList].sort((a, b) => b.prodPrice - a.prodPrice)
     let ProductsAZ = [...ProductList].sort((a, b) => {
@@ -29,6 +30,10 @@ export default function ProductsPage({ addFunc }) {
     function selectMenu() {
         showSelect === '' ? setShowSelect('hide') : setShowSelect('')
         showSelect === 'hide' ? setArrow('turn-arrow') : setArrow('')
+    }
+
+    function prodsNumOnPageSelect() {
+        setShowList(!showList)
     }
 
     function setSelect(e) {
@@ -57,11 +62,6 @@ export default function ProductsPage({ addFunc }) {
         });
     }
 
-    function pageNumber(i) {
-        setPage(i)
-
-    }
-
     return (
         <div className='products-page'>
             <div className='products-cover-container'>
@@ -70,16 +70,30 @@ export default function ProductsPage({ addFunc }) {
                 <img className='wave' src={wave} alt="" />
             </div>
             <div className='prods-max-width'>
-                <div className='custom-select' >
-                    <button className='select-btn' onClick={selectMenu}>
-                        Sort by:<p className='sortby-text'>{selected}</p>
-                        <img className={`sorting-arrow ${arrow}`} src={arrowIcon} alt="" />
-                    </button>
-                    <ul className={`products-sorting ${showSelect}`}>
-                        <li onClick={setSelect} className='sorting-mode'>Price: Low to high</li>
-                        <li onClick={setSelect} className='sorting-mode'>Price: High to low</li>
-                        <li onClick={setSelect} className='sorting-mode'>A-Z</li>
-                    </ul>
+                <div className='select-main-container'>
+                    <div className='prods-display-select'>
+                        <button className='select-btn prods-num-btn' onClick={() => { prodsNumOnPageSelect() }}>Show: {chunkSize}
+                            <img className={`sorting-arrow`} src={arrowIcon} alt="" />
+                        </button>
+                        {showList && (
+                            <ul className='show-prods-num-ul'>
+                                <li className='show-prods-num' onClick={() => { setChunkSize(8); prodsNumOnPageSelect() }}>8</li>
+                                <li className='show-prods-num' onClick={() => { setChunkSize(16); prodsNumOnPageSelect() }}>16</li>
+                                <li className='show-prods-num' onClick={() => { setChunkSize(32); prodsNumOnPageSelect() }}>32</li>
+                            </ul>
+                        )}
+                    </div>
+                    <div className='custom-select' >
+                        <button className='select-btn' onClick={selectMenu}>
+                            Sort by:<p className='sortby-text'>{selected}</p>
+                            <img className={`sorting-arrow ${arrow}`} src={arrowIcon} alt="" />
+                        </button>
+                        <ul className={`products-sorting ${showSelect}`}>
+                            <li onClick={setSelect} className='sorting-mode'>Price: Low to high</li>
+                            <li onClick={setSelect} className='sorting-mode'>Price: High to low</li>
+                            <li onClick={setSelect} className='sorting-mode'>A-Z</li>
+                        </ul>
+                    </div>
                 </div>
                 <div className='prods-container'>
                     {sortingRender.slice((page - 1) * chunkSize, page * chunkSize).map(prod =>
@@ -91,7 +105,7 @@ export default function ProductsPage({ addFunc }) {
                     </button>
                     <ul className='page-nums'>
                         {createArray(Math.ceil(sortingRender.length / chunkSize)).map(i =>
-                            <li onClick={() => pageNumber(i)}
+                            <li onClick={() => setPage(i)}
                                 className={`page-number ${i === page ? 'selected-page' : ''}`}
                                 key={i}>{i}</li>)}
                     </ul>
