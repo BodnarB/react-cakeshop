@@ -107,7 +107,28 @@
         {
             "imgSrc": "/Assets/Products/016.avif",
             "prodTitle": "Vanilla Cake",
-            "prodPrice": "12.5",
+            "prodPrice": "11",
+            "totalprodQty": 0,
+            "totalPrice": 0
+        },
+        {
+            "imgSrc": "/Assets/Products/017.avif",
+            "prodTitle": "Celestial Delight",
+            "prodPrice": "9.5",
+            "totalprodQty": 0,
+            "totalPrice": 0
+        },
+        {
+            "imgSrc": "/Assets/Products/018.avif",
+            "prodTitle": "Mystic Mousse",
+            "prodPrice": "8",
+            "totalprodQty": 0,
+            "totalPrice": 0
+        },
+        {
+            "imgSrc": "/Assets/Products/019.avif",
+            "prodTitle": "Enchanted Caramel Cake",
+            "prodPrice": "14",
             "totalprodQty": 0,
             "totalPrice": 0
         }

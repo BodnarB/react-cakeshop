@@ -12,7 +12,7 @@ export default function ProductsPage({ addFunc }) {
     const [showSelect, setShowSelect] = useState('hide')
     const [arrow, setArrow] = useState('')
     const [page, setPage] = useState(1)
-    const chunkSize = 8;
+    const chunkSize = 8
     let ProductsAscending = [...ProductList].sort((a, b) => a.prodPrice - b.prodPrice)
     let ProductsDescending = [...ProductList].sort((a, b) => b.prodPrice - a.prodPrice)
     let ProductsAZ = [...ProductList].sort((a, b) => {
@@ -90,7 +90,7 @@ export default function ProductsPage({ addFunc }) {
                         <img src={arrowIcon} alt="" />
                     </button>
                     <ul className='page-nums'>
-                        {createArray(Math.ceil(sortingRender.length / 8)).map(i =>
+                        {createArray(Math.ceil(sortingRender.length / chunkSize)).map(i =>
                             <li onClick={() => pageNumber(i)}
                                 className={`page-number ${i === page ? 'selected-page' : ''}`}
                                 key={i}>{i}</li>)}
