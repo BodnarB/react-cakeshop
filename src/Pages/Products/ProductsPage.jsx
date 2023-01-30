@@ -10,10 +10,15 @@ export default function ProductsPage({ addFunc }) {
 
     const [selected, setSelected] = useState('Price: Low to high')
     const [showSelect, setShowSelect] = useState('hide')
-    const [arrow, setArrow] = useState('')
+
     const [page, setPage] = useState(1)
     const [chunkSize, setChunkSize] = useState(8)
-    const [showList, setShowList] = useState(false);
+
+    const [showList, setShowList] = useState(false)
+    const [arrowClass, setArrowClass] = useState('')
+    const [sortList, setSortList] = useState(false)
+    const [arrowClassInSorting, setarrowClassInSorting] = useState('')
+
     let ProductsAscending = [...ProductList].sort((a, b) => a.prodPrice - b.prodPrice)
     let ProductsDescending = [...ProductList].sort((a, b) => b.prodPrice - a.prodPrice)
     let ProductsAZ = [...ProductList].sort((a, b) => {
@@ -27,20 +32,21 @@ export default function ProductsPage({ addFunc }) {
     })
     const [sortingRender, setSortingRender] = useState(ProductsAscending)
 
-    function selectMenu() {
-        showSelect === '' ? setShowSelect('hide') : setShowSelect('')
-        showSelect === 'hide' ? setArrow('turn-arrow') : setArrow('')
+    function prodsSortingSelect() {
+        setSortList(!sortList)
+        setarrowClassInSorting(sortList ? '' : 'rotated')
     }
 
     function prodsNumOnPageSelect() {
         setShowList(!showList)
+        setArrowClass(showList ? '' : 'rotated')
     }
 
-    function setSelect(e) {
-        setSelected(e.target.innerText)
-        setShowSelect('hide')
-        setArrow('')
-    }
+    // function setSelect(e) {
+    //     setSelected(e.target.innerText)
+    //     setShowSelect('hide')
+    //     setArrow('')
+    // }
 
     useEffect(() => {
         let sortingRendering = ''
@@ -72,8 +78,8 @@ export default function ProductsPage({ addFunc }) {
             <div className='prods-max-width'>
                 <div className='select-main-container'>
                     <div className='prods-display-select'>
-                        <button className='select-btn prods-num-btn' onClick={() => { prodsNumOnPageSelect() }}>Show: {chunkSize}
-                            <img className={`sorting-arrow`} src={arrowIcon} alt="" />
+                        <button className='select-btn prods-num-btn' onClick={prodsNumOnPageSelect}>Show: {chunkSize}
+                            <img className={`sorting-arrow ${arrowClass}`} src={arrowIcon} alt="" />
                         </button>
                         {showList && (
                             <ul className='show-prods-num-ul'>
@@ -84,15 +90,17 @@ export default function ProductsPage({ addFunc }) {
                         )}
                     </div>
                     <div className='custom-select' >
-                        <button className='select-btn' onClick={selectMenu}>
+                        <button className='select-btn' onClick={prodsSortingSelect}>
                             Sort by:<p className='sortby-text'>{selected}</p>
-                            <img className={`sorting-arrow ${arrow}`} src={arrowIcon} alt="" />
+                            <img className={`sorting-arrow ${arrowClassInSorting}`} src={arrowIcon} alt="" />
                         </button>
-                        <ul className={`products-sorting ${showSelect}`}>
-                            <li onClick={setSelect} className='sorting-mode'>Price: Low to high</li>
-                            <li onClick={setSelect} className='sorting-mode'>Price: High to low</li>
-                            <li onClick={setSelect} className='sorting-mode'>A-Z</li>
-                        </ul>
+                        {sortList && (
+                            <ul className={`products-sorting`}>
+                                <li onClick={prodsSortingSelect} className='sorting-mode'>Price: Low to high</li>
+                                <li onClick={prodsSortingSelect} className='sorting-mode'>Price: High to low</li>
+                                <li onClick={prodsSortingSelect} className='sorting-mode'>A-Z</li>
+                            </ul>
+                        )}
                     </div>
                 </div>
                 <div className='prods-container'>

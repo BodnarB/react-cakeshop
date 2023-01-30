@@ -216,6 +216,10 @@
     padding: 0.5rem;
 }
 
+.rotated {
+    transform: rotate(180deg);
+  }
+
 @media (min-width:992px) {
     .prods-container {
         gap: 1.5rem;
