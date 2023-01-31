@@ -19,7 +19,7 @@ export default function Cart({ cart, minusItem, plusItem, addFunc, cartItemNum, 
                     <div className='cart-items-container'>
                         {cart.map(cartItem =>
                             <div className='cart-prod-card' key={uuidv4()}>
-                                <img className='cart-prod-img' src={cartItem.imgSrc} alt="cake" />
+                                <img className='cart-prod-img' src={process.env.PUBLIC_URL + cartItem.imgSrc} alt="cake" />
                                 <div className='cart-prod-container'>
                                     <p className='cart-prod-info'>{cartItem.prodTitle}</p>
                                     <p className='cart-prod-info'>{cartItem.totalPrice} $</p>

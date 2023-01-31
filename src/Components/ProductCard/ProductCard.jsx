@@ -4,7 +4,7 @@ import './ProductCard.css'
 export default function ProductCard({ prod, addFunc }) {
     return (
         <div className='prod-card'>
-            <img className='prod-img' src={prod.imgSrc} alt="" />
+            <img className='prod-img' src={process.env.PUBLIC_URL + prod.imgSrc} alt="" />
             <div className='prod-card-container'>
                 <div className='prod-info'>
                     <p>{prod.prodTitle}</p>
