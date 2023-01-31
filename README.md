@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Cake Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a single-page React web application that represents a cake shop. It has four pages: Home, Products, Contact, and Cart. 
+With a dynamic product catalog powered by a JSON file, it's easy to add or remove cakes to the list and have the changes reflected in the application.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Home page with an About Us section and a Best Seller section that displays four popular cakes
+- Products page with a catalog of cakes, up to 32 cakes per page, that can be sorted by price (low to high, high to low) or name (A-Z)
+- Ability to change the number of cakes displayed per page (8, 16, or 32)
+- Option to add cakes to the Cart, with a maximum quantity of 10 per product
+- Cart page with a subtotal of the number of items and the total price
+- Contact page with contact information, form and a Google Map
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- HTML
+- CSS
+- JavaScript
 
-### `npm test`
+## Access the Application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application is hosted at https://bodnarb.hu/react-cakeshop/
 
-### `npm run build`
+## Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="https://raw.githubusercontent.com/BodnarB/react-cakeshop/master/screenshots/home.png" width="200" alt="homepage"/>
+<img src="https://raw.githubusercontent.com/BodnarB/react-cakeshop/master/screenshots/prods.png" width="200" alt="products page"/>
+<img src="https://raw.githubusercontent.com/BodnarB/react-cakeshop/master/screenshots/cart.png" width="200" alt="cart page"/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## License
 
-### `npm run eject`
+This project does not have a license.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Note
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please note that this webshop is a fictional project created for demonstration purposes and not a real online store. The Checkout button and Contact form are for display only and do not have functional capabilities.
