@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/react-cakeshop/static/css/main.14feade0.css",
+    "main.js": "/react-cakeshop/static/js/main.a0ce9ea4.js",
+    "static/media/photo-1491222825723-0b8308840432.avif": "/react-cakeshop/static/media/photo-1491222825723-0b8308840432.cfa6cefd7b2ed1315b31.avif",
+    "static/media/logo.png": "/react-cakeshop/static/media/logo.4512d0abbfecf77499b6.png",
+    "static/media/wave.svg": "/react-cakeshop/static/media/wave.cbdfadb1e1117e4c045b2f1412c03cb4.svg",
+    "static/media/insta.svg": "/react-cakeshop/static/media/insta.4d969dd141d389ed7a2fe7584b56d681.svg",
+    "static/media/hollowed-boxes.svg": "/react-cakeshop/static/media/hollowed-boxes.c52e41726213feecf224.svg",
+    "static/media/envelope-at-fill.svg": "/react-cakeshop/static/media/envelope-at-fill.e1ae07e30da283b15e87d858ed142e55.svg",
+    "static/media/yt.svg": "/react-cakeshop/static/media/yt.85c2f09d0ead35313e7bb2812e3c66f5.svg",
+    "index.html": "/react-cakeshop/index.html",
+    "static/media/trash3.svg": "/react-cakeshop/static/media/trash3.fa639c873f5aa7157aff04504781be80.svg",
+    "static/media/arrows.svg": "/react-cakeshop/static/media/arrows.4b4e48a2c5f8e8c35ce65eabf58eec9e.svg",
+    "static/media/telephone.svg": "/react-cakeshop/static/media/telephone.92e390f92427328323834e1b8ab89138.svg",
+    "static/media/facebook.svg": "/react-cakeshop/static/media/facebook.4d4460260f64103d8da4a91d8e856d36.svg",
+    "static/media/bagfill.svg": "/react-cakeshop/static/media/bagfill.da8011c8f6dbb99c44cf08b60210983c.svg",
+    "static/media/arrow-down.svg": "/react-cakeshop/static/media/arrow-down.27c49128156891d28b6305f401c30063.svg",
+    "static/media/plus-lg.svg": "/react-cakeshop/static/media/plus-lg.9f3ead514076c9a90256403930e4739e.svg",
+    "static/media/geo-alt-fill.svg": "/react-cakeshop/static/media/geo-alt-fill.94c6a40d70da7b868b3ef5f3020a41d5.svg",
+    "static/media/dash-lg.svg": "/react-cakeshop/static/media/dash-lg.eb355a3e883ed36e5ebe690839e3b4c4.svg",
+    "main.14feade0.css.map": "/react-cakeshop/static/css/main.14feade0.css.map",
+    "main.a0ce9ea4.js.map": "/react-cakeshop/static/js/main.a0ce9ea4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14feade0.css",
+    "static/js/main.a0ce9ea4.js"
+  ]
+}
