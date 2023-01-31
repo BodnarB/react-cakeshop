@@ -1,49 +1,49 @@
     [
         {
             "imgSrc": "/Assets/Products/001.avif",
-            "prodTitle": "Extra chocolate cake",
+            "prodTitle": "Extra Chocolate Cake",
             "prodPrice": "7",
             "totalprodQty": 0,
             "totalPrice": 0
         },
         {
             "imgSrc": "/Assets/Products/002.avif",
-            "prodTitle": "Forest fruit cake",
+            "prodTitle": "Forest Fruit Cake",
             "prodPrice": "6.5",
             "totalprodQty": 0,
             "totalPrice": 0
         },
         {
             "imgSrc": "/Assets/Products/004.avif",
-            "prodTitle": "Strawberry cream cake",
+            "prodTitle": "Strawberry Cream Cake",
             "prodPrice": "7.8",
             "totalprodQty": 0,
             "totalPrice": 0
         },
         {
             "imgSrc": "/Assets/Products/003.avif",
-            "prodTitle": "Vanilla jelly cake",
+            "prodTitle": "Vanilla Jelly Cake",
             "prodPrice": "6",
             "totalprodQty": 0,
             "totalPrice": 0
         },
         {
             "imgSrc": "/Assets/Products/005.avif",
-            "prodTitle": "Raspberry cake",
+            "prodTitle": "Raspberry Cake",
             "prodPrice": "7.2",
             "totalprodQty": 0,
             "totalPrice": 0
         },
         {
             "imgSrc": "/Assets/Products/006.avif",
-            "prodTitle": "Vanilla cake with berries",
+            "prodTitle": "Vanilla Cake With Berries",
             "prodPrice": "7",
             "totalprodQty": 0,
             "totalPrice": 0
         },
         {
             "imgSrc": "/Assets/Products/007.avif",
-            "prodTitle": "Pink and white cake",
+            "prodTitle": "Pink And White Cake",
             "prodPrice": "6",
             "totalprodQty": 0,
             "totalPrice": 0
@@ -106,7 +106,7 @@
         },
         {
             "imgSrc": "/Assets/Products/016.avif",
-            "prodTitle": "Vanilla Cake",
+            "prodTitle": "Vanilla Deluxe Cake",
             "prodPrice": "11",
             "totalprodQty": 0,
             "totalPrice": 0
