@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-cakeshop/static/css/main.14feade0.css",
-    "main.js": "/react-cakeshop/static/js/main.9f21076f.js",
+    "main.js": "/react-cakeshop/static/js/main.8f7c4a25.js",
     "static/media/photo-1491222825723-0b8308840432.avif": "/react-cakeshop/static/media/photo-1491222825723-0b8308840432.cfa6cefd7b2ed1315b31.avif",
     "static/media/logo.png": "/react-cakeshop/static/media/logo.4512d0abbfecf77499b6.png",
     "static/media/wave.svg": "/react-cakeshop/static/media/wave.cbdfadb1e1117e4c045b2f1412c03cb4.svg",
@@ -20,10 +20,10 @@
     "static/media/geo-alt-fill.svg": "/react-cakeshop/static/media/geo-alt-fill.94c6a40d70da7b868b3ef5f3020a41d5.svg",
     "static/media/dash-lg.svg": "/react-cakeshop/static/media/dash-lg.eb355a3e883ed36e5ebe690839e3b4c4.svg",
     "main.14feade0.css.map": "/react-cakeshop/static/css/main.14feade0.css.map",
-    "main.9f21076f.js.map": "/react-cakeshop/static/js/main.9f21076f.js.map"
+    "main.8f7c4a25.js.map": "/react-cakeshop/static/js/main.8f7c4a25.js.map"
   },
   "entrypoints": [
     "static/css/main.14feade0.css",
-    "static/js/main.9f21076f.js"
+    "static/js/main.8f7c4a25.js"
   ]
 }
