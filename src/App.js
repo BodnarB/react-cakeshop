@@ -34,7 +34,7 @@ function App() {
       array.splice(idx, 1)
       return setCart([...array])
     }
-    array[idx].totalPrice = array[idx].totalprodQty * array[idx].prodPrice
+    array[idx].totalPrice = parseFloat((array[idx].totalprodQty * array[idx].prodPrice).toFixed(1))
     setCart([...array])
   }
 
