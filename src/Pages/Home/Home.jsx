@@ -3,7 +3,7 @@ import './Home.css'
 import introImg from '../../Assets/photo-1491222825723-0b8308840432.avif'
 import BestSellers from '../../Components/BestSellers/BestSellers'
 
-export default function Home({ addFunc }) {
+export default function Home({ addFunc, ProductList, cart }) {
 
   return (
     <>
@@ -26,7 +26,7 @@ export default function Home({ addFunc }) {
           </div>
         </section>
         <section className='best-sellers-home'>
-          <BestSellers addFunc={addFunc} />
+          <BestSellers addFunc={addFunc} ProductList={ProductList} cart={cart} />
         </section>
         <section className='history'>
           <div className="max-width-history">

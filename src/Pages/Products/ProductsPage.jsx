@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid';
-import ProductList from '../../Products.json'
 import wave from '../../Assets/wave.svg'
 import './ProductsPage.css'
 import arrowIcon from '../../Assets/arrow-down.svg'
 import ProductCard from '../../Components/ProductCard/ProductCard';
 
-export default function ProductsPage({ addFunc }) {
-
+export default function ProductsPage({ addFunc, ProductList, cart }) {
     const [selected, setSelected] = useState('Price: Low to high')
     const [page, setPage] = useState(1)
     const [chunkSize, setChunkSize] = useState(8)
@@ -107,7 +105,7 @@ export default function ProductsPage({ addFunc }) {
                 </div>
                 <div className='prods-container'>
                     {sortingRender.slice((page - 1) * chunkSize, page * chunkSize).map(prod =>
-                        <ProductCard prod={prod} addFunc={addFunc} key={uuidv4()} />)}
+                        <ProductCard prod={prod} addFunc={addFunc} key={uuidv4()} cart={cart}/>)}
                 </div>
                 <div className='page-select'>
                     <button onClick={() => setPage(page - 1)} className='page-arrow arrow-left' disabled={page === 1}>

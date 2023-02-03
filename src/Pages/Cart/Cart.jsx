@@ -7,7 +7,7 @@ import PlusBtn from '../../Assets/plus-lg.svg'
 import MinusBtn from '../../Assets/dash-lg.svg'
 import DelBtn from '../../Assets/trash3.svg'
 
-export default function Cart({ cart, minusItem, plusItem, addFunc, cartItemNum, cartTotalPrice, delItem }) {
+export default function Cart({ cart, minusItem, plusItem, addFunc, cartItemNum, cartTotalPrice, delItem, ProductList }) {
 
     return (
         <div className='cart-page'>
@@ -54,7 +54,7 @@ export default function Cart({ cart, minusItem, plusItem, addFunc, cartItemNum, 
             }
             <section className='best-sellers-cart'>
                 <div className='best-sellers-max-width '>
-                    <BestSellers addFunc={addFunc} />
+                    <BestSellers addFunc={addFunc} ProductList={ProductList} cart={cart} />
                 </div>
             </section>
         </div >

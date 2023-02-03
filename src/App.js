@@ -9,6 +9,7 @@ import ProductsPage from './Pages/Products/ProductsPage';
 import Contact from './Pages/Contact/Contact';
 import Cart from './Pages/Cart/Cart';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
+import ProductList from './Products.json'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
     setCartTotalPrice(cart.reduce((acc, curr) => acc + curr.totalPrice, 0).toFixed(1))
     window.localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart])
+
 
   function addOrRemoveFromCart(array, prodToFind, quantity) {
     let idx = array.findIndex((item) => item.prodTitle === prodToFind.prodTitle)
@@ -74,11 +76,11 @@ function App() {
       <div className="App">
         <Header cartItemNum={cartItemNum} />
         <Routes>
-          <Route exact path='/' element={<Home addFunc={addFunc} />} />
-          <Route path='/products' element={<ProductsPage addFunc={addFunc} />} />
+          <Route exact path='/' element={<Home addFunc={addFunc} ProductList={ProductList} cart={cart} />} />
+          <Route path='/products' element={<ProductsPage addFunc={addFunc} ProductList={ProductList} cart={cart} />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/cart' element={<Cart cart={cart} minusItem={minusItem} plusItem={plusItem}
-            addFunc={addFunc} cartItemNum={cartItemNum} cartTotalPrice={cartTotalPrice} delItem={delItem} />} />
+            addFunc={addFunc} cartItemNum={cartItemNum} cartTotalPrice={cartTotalPrice} delItem={delItem} ProductList={ProductList} />} />
         </Routes>
         <Footer />
       </div>

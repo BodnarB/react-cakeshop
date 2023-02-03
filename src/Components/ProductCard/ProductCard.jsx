@@ -1,7 +1,15 @@
 import React from 'react';
 import './ProductCard.css'
 
-export default function ProductCard({ prod, addFunc }) {
+export default function ProductCard({ prod, addFunc, cart }) {
+
+    function disableBtn() {
+        if (cart.length > 0) {
+            let idx = cart.findIndex((item) => item.prodTitle === prod.prodTitle)
+            return idx >= 0
+        }
+    }
+
     return (
         <div className='prod-card'>
             <img className='prod-img' src={process.env.PUBLIC_URL + prod.imgSrc} alt="" />
@@ -10,9 +18,9 @@ export default function ProductCard({ prod, addFunc }) {
                     <p>{prod.prodTitle}</p>
                     <p>{prod.prodPrice} $</p>
                 </div>
-                <button className='prod-add-btn' disabled={prod.totalprodQty > 0}
-                    onClick={() => { addFunc(prod) }}>
-                    {prod.totalprodQty > 0 ? <>Added to cart</> : <>Add to cart</>}
+                <button className='prod-add-btn' disabled={disableBtn()}
+                    onClick={() => { addFunc(prod); disableBtn() }}>
+                    {disableBtn() ? <>Added to cart</> : <>Add to cart</>}
                 </button>
             </div>
         </div>
