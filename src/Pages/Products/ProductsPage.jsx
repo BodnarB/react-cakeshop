@@ -15,7 +15,6 @@ export default function ProductsPage({ addFunc }) {
     const [arrowClass, setArrowClass] = useState('')
     const [sortList, setSortList] = useState(false)
     const [arrowClassInSorting, setarrowClassInSorting] = useState('')
-
     let ProductsAscending = [...ProductList].sort((a, b) => a.prodPrice - b.prodPrice)
     let ProductsDescending = [...ProductList].sort((a, b) => b.prodPrice - a.prodPrice)
     let ProductsAZ = [...ProductList].sort((a, b) => {
@@ -63,6 +62,12 @@ export default function ProductsPage({ addFunc }) {
         });
     }
 
+    function selectShowNum(e) {
+        setChunkSize(e.target.innerText)
+        prodsNumOnPageSelect()
+        setPage(1)
+    }
+
     return (
         <div className='products-page'>
             <div className='products-cover-container'>
@@ -78,9 +83,9 @@ export default function ProductsPage({ addFunc }) {
                         </button>
                         {showList && (
                             <ul className='show-prods-num-ul'>
-                                <li className='show-prods-num' onClick={() => { setChunkSize(8); prodsNumOnPageSelect() }}>8</li>
-                                <li className='show-prods-num' onClick={() => { setChunkSize(16); prodsNumOnPageSelect() }}>16</li>
-                                <li className='show-prods-num' onClick={() => { setChunkSize(32); prodsNumOnPageSelect() }}>32</li>
+                                <li className='show-prods-num' onClick={(e) => { selectShowNum(e) }}>8</li>
+                                <li className='show-prods-num' onClick={(e) => { selectShowNum(e) }}>16</li>
+                                <li className='show-prods-num' onClick={(e) => { selectShowNum(e) }}>32</li>
                             </ul>
                         )}
                     </div>
