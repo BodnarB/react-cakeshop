@@ -11,14 +11,15 @@ import Cart from './Pages/Cart/Cart';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {
-  
+
   const [cartItemNum, setcartItemNum] = useState(0)
   const [cartTotalPrice, setCartTotalPrice] = useState(0)
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState(JSON.parse(window.localStorage.getItem('cart')) || [])
 
   useEffect(() => {
     setcartItemNum(cart.reduce((acc, curr) => acc + curr.totalprodQty, 0))
     setCartTotalPrice(cart.reduce((acc, curr) => acc + curr.totalPrice, 0).toFixed(1))
+    window.localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart])
 
   function addOrRemoveFromCart(array, prodToFind, quantity) {

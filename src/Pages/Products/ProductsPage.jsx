@@ -30,6 +30,7 @@ export default function ProductsPage({ addFunc }) {
 
     function prodsSortingSelect() {
         setSortList(!sortList)
+        setShowList(false)
         setarrowClassInSorting(sortList ? '' : 'rotated')
     }
 
@@ -39,6 +40,7 @@ export default function ProductsPage({ addFunc }) {
 
     function prodsNumOnPageSelect() {
         setShowList(!showList)
+        setSortList(false)
         setArrowClass(showList ? '' : 'rotated')
     }
 
