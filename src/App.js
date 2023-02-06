@@ -1,14 +1,14 @@
 import './reset.css'
-import './App.css';
-import Home from './Pages/Home/Home';
-import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
-import { useState, useEffect } from 'react';
-import { HashRouter, Route, Routes } from 'react-router-dom';
-import ProductsPage from './Pages/Products/ProductsPage';
-import Contact from './Pages/Contact/Contact';
-import Cart from './Pages/Cart/Cart';
-import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
+import './App.css'
+import Home from './Pages/Home/Home'
+import Header from './Components/Header/Header'
+import Footer from './Components/Footer/Footer'
+import { useState, useEffect } from 'react'
+import { HashRouter, Route, Routes } from 'react-router-dom'
+import ProductsPage from './Pages/Products/ProductsPage'
+import Contact from './Pages/Contact/Contact'
+import Cart from './Pages/Cart/Cart'
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop'
 import ProductList from './Products.json'
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     setcartItemNum(cart.reduce((acc, curr) => acc + curr.totalprodQty, 0))
     setCartTotalPrice(cart.reduce((acc, curr) => acc + curr.totalPrice, 0).toFixed(1))
-    window.localStorage.setItem('cart', JSON.stringify(cart));
+    window.localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
 
 
@@ -85,7 +85,7 @@ function App() {
         <Footer />
       </div>
     </HashRouter>
-  );
+  )
 }
 
-export default App;
+export default App

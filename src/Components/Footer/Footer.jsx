@@ -12,9 +12,9 @@ export default function Footer() {
         <footer>
             <p>Cake shop &copy; {year} </p>
             <div className='social-container'>
-                <img className='social-logo' src={facebookLogo} alt="" />
-                <img className='social-logo' src={instaLogo} alt="" />
-                <img className='social-logo' src={ytLogo} alt="" />
+                <img className='social-logo' src={facebookLogo} alt="facebook logo" />
+                <img className='social-logo' src={instaLogo} alt="instagram logo" />
+                <img className='social-logo' src={ytLogo} alt="youtube logo" />
             </div>
             <nav>
                 <ul className='footer-nav'>

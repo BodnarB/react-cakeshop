@@ -20,13 +20,13 @@ export default function Header({ cartItemNum }) {
             <div className='header-max-width'>
                 <div className='header-left-container'>
                     <Link className='logo-container' to="/">
-                        <img className='logo-img' src={logo} alt="" />
+                        <img className='logo-img' src={logo} alt="logo about a cake" />
                         <h1 className='logo-text'>Cake shop</h1>
                     </Link>
                     <Link to='/cart' onClick={hideMenu}>
                         <div className='header-cart-container'>
                             <p className='header-cart-text'>{cartItemNum}</p>
-                            <img className='header-cart-img' src={bag} alt="" />
+                            <img className='header-cart-img' src={bag} alt="cart icon" />
                         </div>
                     </Link>
 

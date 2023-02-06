@@ -9,7 +9,7 @@ export default function Home({ addFunc, ProductList, cart }) {
     <>
       <main className='home'>
         <div className='intro-img-fade'>
-          <img className='intro-cover-img' src="https://images.pexels.com/photos/461431/pexels-photo-461431.jpeg" alt="" />
+          <img className='intro-cover-img' src="https://images.pexels.com/photos/461431/pexels-photo-461431.jpeg" alt="cake with strawberries" />
           <p className='intro-cover-text'>The best cakes in town</p>
         </div>
         <section className='about-us'>
@@ -22,7 +22,7 @@ export default function Home({ addFunc, ProductList, cart }) {
               <p className='home-text'>Our cakes are perfect for birthdays, weddings, and any other special occasion.
                 Browse our selection today and place your order for pickup or delivery. Let us help make your special day even sweeter!</p>
             </div>
-            <img className='intro-img' src={introImg} alt="" />
+            <img className='intro-img' src={introImg} alt="cake shop" />
           </div>
         </section>
         <section className='best-sellers-home'>
@@ -35,7 +35,7 @@ export default function Home({ addFunc, ProductList, cart }) {
               <p className='home-text'>Our bakery has a long history of providing customers with delicious cakes for all occasions. We were founded by a family of bakers who have been passionate about creating sweet treats for generations. We started off as a small local business, but our reputation for producing high-quality cakes quickly spread.</p>
               <p className='home-text'>Today, we are proud to serve a wide range of customers, from individuals looking for a special treat to businesses in need of desserts for events. Throughout the years, we have constantly evolved and innovated our recipes, equipment and techniques to bring you the best cakes we can make.</p>
             </div>
-            <img className='history-img' src="https://images.pexels.com/photos/6210908/pexels-photo-6210908.jpeg" alt="" />
+            <img className='history-img' src="https://images.pexels.com/photos/6210908/pexels-photo-6210908.jpeg" alt="decorating a cake" />
           </div>
         </section>
       </main>

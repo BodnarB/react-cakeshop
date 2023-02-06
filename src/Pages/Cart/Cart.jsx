@@ -19,18 +19,21 @@ export default function Cart({ cart, minusItem, plusItem, addFunc, cartItemNum, 
                     <div className='cart-items-container'>
                         {cart.map(cartItem =>
                             <div className='cart-prod-card' key={uuidv4()}>
-                                <img className='cart-prod-img' src={process.env.PUBLIC_URL + cartItem.imgSrc} alt="cake" />
+                                <img className='cart-prod-img' src={process.env.PUBLIC_URL + cartItem.imgSrc} alt={cartItem.prodTitle} />
                                 <div className='cart-prod-container'>
                                     <p className='cart-prod-info'>{cartItem.prodTitle}</p>
                                     <p className='cart-prod-info'>{cartItem.totalPrice} $</p>
                                     <div>
                                         <div className='prod-btn-container'>
                                             <div className='cart-btns'>
-                                                <img className='prod-qty-btn' onClick={() => minusItem(cartItem)} src={MinusBtn} alt="minus icon" />
+                                                <img className='prod-qty-btn'
+                                                    onClick={() => minusItem(cartItem)} src={MinusBtn} alt="minus icon" />
                                                 <p>{cartItem.totalprodQty}</p>
-                                                <img className='prod-qty-btn' onClick={() => plusItem(cartItem)} src={PlusBtn} alt="plus icon" />
+                                                <img className='prod-qty-btn'
+                                                    onClick={() => plusItem(cartItem)} src={PlusBtn} alt="plus icon" />
                                             </div>
-                                            <img className='del-btn' onClick={() => delItem(cartItem)} src={DelBtn} alt="bin icon" />
+                                            <img className='del-btn'
+                                                onClick={() => delItem(cartItem)} src={DelBtn} alt="bin icon" />
                                         </div>
                                     </div>
                                 </div>
@@ -48,12 +51,12 @@ export default function Cart({ cart, minusItem, plusItem, addFunc, cartItemNum, 
             }
             {cart.length === 0 &&
                 <div className='empty-cart-container'>
-                    <img src={EmptyCartImg} alt="" />
+                    <img src={EmptyCartImg} alt="a cat in a basket" />
                     <p className='empty-cart'>Your cart is empty, check out our fancy cakes.</p>
                 </div>
             }
             <section className='best-sellers-cart'>
-                <div className='best-sellers-max-width '>
+                <div className='best-sellers-max-width'>
                     <BestSellers addFunc={addFunc} ProductList={ProductList} cart={cart} />
                 </div>
             </section>

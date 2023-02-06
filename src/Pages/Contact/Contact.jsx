@@ -11,15 +11,15 @@ export default function Contact() {
       <div className='contact-w-map'>
         <div className='contact-container'>
           <div className='phone contact-info'>
-            <img className='contact-icons' src={phoneIcon} alt="" />
+            <img className='contact-icons' src={phoneIcon} alt="phone icon" />
             <p>+44 822 142 1158</p>
           </div>
           <div className='phone contact-info'>
-            <img className='contact-icons' src={mailIcon} alt="" />
+            <img className='contact-icons' src={mailIcon} alt="envelope icon" />
             <p>cake.shop@info.uk</p>
           </div>
           <div className='phone contact-info'>
-            <img className='contact-icons' src={geoIcon} alt="" />
+            <img className='contact-icons' src={geoIcon} alt="map mark" />
             <p>78 Broad St, Birmingham</p>
           </div>
         </div>

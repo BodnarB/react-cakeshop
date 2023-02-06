@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import './ProductCard.css'
 
 export default function ProductCard({ prod, addFunc, cart }) {
@@ -12,7 +12,7 @@ export default function ProductCard({ prod, addFunc, cart }) {
 
     return (
         <div className='prod-card'>
-            <img className='prod-img' src={process.env.PUBLIC_URL + prod.imgSrc} alt="" />
+            <img className='prod-img' src={process.env.PUBLIC_URL + prod.imgSrc} alt={prod.prodTitle} />
             <div className='prod-card-container'>
                 <div className='prod-info'>
                     <p>{prod.prodTitle}</p>
