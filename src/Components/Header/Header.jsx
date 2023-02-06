@@ -36,6 +36,7 @@ export default function Header({ cartItemNum }) {
                         <li onClick={hideMenu}><Link className='nav-link' to="/">Home</Link></li>
                         <li onClick={hideMenu}><Link className='nav-link' to="/products">Products</Link></li>
                         <li onClick={hideMenu}><Link className='nav-link' to="/contact">Contact</Link></li>
+                        <li onClick={hideMenu}><Link className='nav-link' to="/recipe">Recipe</Link></li>
                     </ul>
                     <div onClick={menuClick} className='hamburger-button'>
                         <span className='hamburger-lines'></span>

@@ -8,6 +8,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom'
 import ProductsPage from './Pages/Products/ProductsPage'
 import Contact from './Pages/Contact/Contact'
 import Cart from './Pages/Cart/Cart'
+import Recipe from './Pages/Recipe/Recipe'
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop'
 import ProductList from './Products.json'
 
@@ -81,6 +82,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/cart' element={<Cart cart={cart} minusItem={minusItem} plusItem={plusItem}
             addFunc={addFunc} cartItemNum={cartItemNum} cartTotalPrice={cartTotalPrice} delItem={delItem} ProductList={ProductList} />} />
+          <Route path='/recipe' element={<Recipe />} />
         </Routes>
         <Footer />
       </div>
