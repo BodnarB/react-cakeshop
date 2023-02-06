@@ -49,19 +49,21 @@ export default function Recipe() {
             ) : (
                 <div className='recipe-container'>
                     <h3 className='recipe-title'>{mealDetails.strMeal}</h3>
-                    <img className='recipe-img' src={mealDetails.strMealThumb} alt={mealDetails.strMeal} />
+                    <div className='recipe-sub-container'>
+                        <img className='recipe-img' src={mealDetails.strMealThumb} alt={mealDetails.strMeal} />
+                        <ul className='ingredient-list'>
+                            {Object.entries(mealDetails).filter(item => item[0].startsWith('strIngredient') && item[1]).map((ingredient, index) => (
+                                <li key={index}>
+                                    {ingredient[1]} - {mealDetails[`strMeasure${index + 1}`]}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                     <p className='recipe-instructions'>
                         {mealDetails.strInstructions ? mealDetails.strInstructions.replace(/&#8232;/g, " ") : ''}
                     </p>
-                    <ul>
-                        {Object.entries(mealDetails).filter(item => item[0].startsWith('strIngredient') && item[1]).map((ingredient, index) => (
-                            <li key={index}>
-                                {ingredient[1]} - {mealDetails[`strMeasure${index + 1}`]}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
 
+                </div>
             )}
         </section>
     )
