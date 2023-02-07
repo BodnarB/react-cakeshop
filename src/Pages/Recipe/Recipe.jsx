@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './Recipe.css'
+import RecipeCover from '../../Assets/recipe-cover.avif'
 
 export default function Recipe() {
 
@@ -18,7 +19,6 @@ export default function Recipe() {
             randomMealRef.current = result[Math.floor(Math.random() * result.length)]
         }
         fetchData()
-        console.log('useeff1')
     }, [])
 
     useEffect(() => {
@@ -32,8 +32,6 @@ export default function Recipe() {
         if (randomMealRef.current) {
             fetchMealDetails()
         }
-
-        console.log('useeff2')
     }, [randomMealRef.current])
 
 
@@ -41,7 +39,9 @@ export default function Recipe() {
     return (
         <section className='recipe-page'>
             <div className='page-header'>
-                <h2 className='recipe-h2'>Recipe</h2>
+                <div className='h2-bg'>
+                    <h2 className='recipe-h2'>Recipe</h2>
+                </div>
                 <p className='recipe-intro-text'>Make your own dessert with our best recipes!</p>
             </div>
             {loading ? (
@@ -51,18 +51,23 @@ export default function Recipe() {
                     <h3 className='recipe-title'>{mealDetails.strMeal}</h3>
                     <div className='recipe-sub-container'>
                         <img className='recipe-img' src={mealDetails.strMealThumb} alt={mealDetails.strMeal} />
-                        <ul className='ingredient-list'>
-                            {Object.entries(mealDetails).filter(item => item[0].startsWith('strIngredient') && item[1]).map((ingredient, index) => (
-                                <li key={index}>
-                                    {ingredient[1]} - {mealDetails[`strMeasure${index + 1}`]}
-                                </li>
-                            ))}
-                        </ul>
+                        <div className='ingredient-container'>
+                            <p className='recipe-sub-title ingredients-title'>Ingredients</p>
+                            <ul className='ingredient-list'>
+                                {Object.entries(mealDetails).filter(item => item[0].startsWith('strIngredient') && item[1]).map((ingredient, index) => (
+                                    <li key={index}>
+                                        {ingredient[1]} - {mealDetails[`strMeasure${index + 1}`]}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
-                    <p className='recipe-instructions'>
-                        {mealDetails.strInstructions ? mealDetails.strInstructions.replace(/&#8232;/g, " ") : ''}
-                    </p>
-
+                    <div className='method-container'>
+                        <p className='recipe-sub-title method-title'>Method</p>
+                        <p className='recipe-instructions'>
+                            {mealDetails.strInstructions ? mealDetails.strInstructions.replace(/&#8232;/g, " ") : ''}
+                        </p>
+                    </div>
                 </div>
             )}
         </section>

@@ -1,38 +1,58 @@
 .recipe-h2 {
-    padding: 1rem 0.5rem;
+    padding: 0.7rem 1rem;
+    max-width: 1200px;
+    font-size: 1.4rem;
+    margin: 0 auto;
+}
+
+.h2-bg {
+    background-color: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
 }
 
 .recipe-intro-text {
     text-align: center;
     font-style: italic;
-    padding: 0.5rem;
+    padding: 0.7rem 0.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    font-weight: 300;
+    width: 100%;
+    bottom: 0;
 }
 
 .page-header {
     background-color: antiquewhite;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,231,189,1) 100%);
+    background: url(../../Assets/recipe-cover.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 220px;
     box-shadow: 0 0 10px #00000030;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    color: white;
+    position: relative;
 }
 
 .recipe-title {
     font-family: 'Merienda', cursive;
-    font-size: 1.1rem;
-    margin: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1.5rem 1rem 1rem;
     text-align: center;
+    color: #291C14;
 }
 
 .recipe-img {
     max-width: 230px;
     border-radius: 1rem;
-    margin: 1rem auto;
-    box-shadow: 0 0 10px #00000050;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #00000033;
 }
 
 .recipe-instructions {
-    padding: 1rem 1.5rem;
-    line-height: normal;
+    padding: 0.5rem 1.5rem;
+    line-height: 1.4;
     word-spacing: 0.25rem;
     max-width: 1200px;
     margin: 0 auto 2rem;
@@ -40,7 +60,7 @@
 
 .ingredient-list {
     width: fit-content;
-    margin: 2rem auto 1rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -50,6 +70,84 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem;
     gap: 1rem;
+}
+
+.recipe-sub-title {
+    margin: 1rem;
+    font-weight: 500;
+    max-width: 1200px;
+}
+
+.method-title {
+    padding: 0 0.5rem;
+}
+
+.ingredient-container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+
+    .recipe-img {
+        width: 40%;
+    }
+
+    .ingredient-container {
+        width: auto;
+    }
+
+    .ingredients-title {
+        margin: 0 0 1rem;
+        text-align: center;
+    }
+
+    .recipe-sub-container {
+        padding: 2rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .recipe-h2 {
+        font-size: 1.6rem;
+    }
+
+    .page-header {
+        height: 300px;
+    }
+
+    .recipe-img {
+        width: auto;
+        max-width: 300px;
+    }
+
+    .recipe-title {
+        font-size: 1.5rem;
+        padding: 2rem 0 0;
+    }
+
+    .recipe-sub-title {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .recipe-img,
+    .ingredient-container {
+        margin: 0;
+    }
+
+    .method-container,
+    .recipe-sub-container {
+        max-width: 1000px;
+        margin: 1rem auto;
+    }
+
+    .recipe-sub-container {
+        justify-content: space-evenly;
+    }
+
 }
