@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/react-cakeshop/static/css/main.53529ee7.css",
-    "main.js": "/react-cakeshop/static/js/main.0dd26199.js",
+    "main.css": "/react-cakeshop/static/css/main.8f94ebb0.css",
+    "main.js": "/react-cakeshop/static/js/main.9dd0a398.js",
+    "static/media/recipe-cover.avif": "/react-cakeshop/static/media/recipe-cover.55f7485d0bcdc48fc8aa.avif",
     "static/media/form-bg.avif": "/react-cakeshop/static/media/form-bg.4e997568381a350f8027.avif",
     "static/media/photo-1491222825723-0b8308840432.avif": "/react-cakeshop/static/media/photo-1491222825723-0b8308840432.cfa6cefd7b2ed1315b31.avif",
     "static/media/logo.png": "/react-cakeshop/static/media/logo.4512d0abbfecf77499b6.png",
@@ -20,11 +21,11 @@
     "static/media/plus-lg.svg": "/react-cakeshop/static/media/plus-lg.9f3ead514076c9a90256403930e4739e.svg",
     "static/media/geo-alt-fill.svg": "/react-cakeshop/static/media/geo-alt-fill.94c6a40d70da7b868b3ef5f3020a41d5.svg",
     "static/media/dash-lg.svg": "/react-cakeshop/static/media/dash-lg.eb355a3e883ed36e5ebe690839e3b4c4.svg",
-    "main.53529ee7.css.map": "/react-cakeshop/static/css/main.53529ee7.css.map",
-    "main.0dd26199.js.map": "/react-cakeshop/static/js/main.0dd26199.js.map"
+    "main.8f94ebb0.css.map": "/react-cakeshop/static/css/main.8f94ebb0.css.map",
+    "main.9dd0a398.js.map": "/react-cakeshop/static/js/main.9dd0a398.js.map"
   },
   "entrypoints": [
-    "static/css/main.53529ee7.css",
-    "static/js/main.0dd26199.js"
+    "static/css/main.8f94ebb0.css",
+    "static/js/main.9dd0a398.js"
   ]
 }
