@@ -1,5 +1,14 @@
-.order-btn {
-    border: 1px solid gray;
-    padding: 0.3rem;
-    border-radius: 0.5rem;
+.checkout-page {
+    padding: 2rem;
+}
+
+.submit-res {
+    text-align: center;
+    margin: 5rem auto;
+}
+
+.checkout-h4 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
 }

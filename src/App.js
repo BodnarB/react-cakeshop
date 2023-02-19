@@ -26,6 +26,11 @@ function App() {
   }, [cart])
 
 
+  function clearCart(){
+    setCart([])
+    window.localStorage.setItem('cart', JSON.stringify(cart))
+  }
+
   function addOrRemoveFromCart(array, prodToFind, quantity) {
     let idx = array.findIndex((item) => item.prodTitle === prodToFind.prodTitle)
     if (quantity > 0) {
@@ -84,7 +89,7 @@ function App() {
           <Route path='/cart' element={<Cart cart={cart} minusItem={minusItem} plusItem={plusItem}
             addFunc={addFunc} cartItemNum={cartItemNum} cartTotalPrice={cartTotalPrice} delItem={delItem} ProductList={ProductList} />} />
           <Route path='/recipe' element={<Recipe />} />
-          <Route path='/checkout' element={<Checkout cart={cart} cartItemNum={cartItemNum} cartTotalPrice={cartTotalPrice} />} />
+          <Route path='/checkout' element={<Checkout cart={cart} cartItemNum={cartItemNum} cartTotalPrice={cartTotalPrice} clearCart={clearCart}/>} />
         </Routes>
         <Footer />
       </div>
