@@ -6,6 +6,8 @@ import EmptyCartImg from '../../Assets/emptycart.png'
 import PlusBtn from '../../Assets/plus-lg.svg'
 import MinusBtn from '../../Assets/dash-lg.svg'
 import DelBtn from '../../Assets/trash3.svg'
+import { Link } from 'react-router-dom'
+
 
 export default function Cart({ cart, minusItem, plusItem, addFunc, cartItemNum, cartTotalPrice, delItem, ProductList }) {
 
@@ -45,7 +47,7 @@ export default function Cart({ cart, minusItem, plusItem, addFunc, cartItemNum, 
                             <p className='subtotal-text'>Subtotal ({cartItemNum} {cartItemNum === 1 ? <>item</> : <>items</>}):</p>
                             <p className='subtotal-price'>{cartTotalPrice} $</p>
                         </div>
-                        <button className='checkout-btn'>Proceed to Checkout</button>
+                        <Link to='/checkout'><button className='checkout-btn'>Proceed to Checkout</button></Link>
                     </div>
                 </div>
             }

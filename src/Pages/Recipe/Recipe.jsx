@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './Recipe.css'
-import RecipeCover from '../../Assets/recipe-cover.avif'
 
 export default function Recipe() {
 
