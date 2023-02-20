@@ -11,7 +11,6 @@ import Cart from './Pages/Cart/Cart'
 import Recipe from './Pages/Recipe/Recipe'
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop'
 import ProductList from './Products.json'
-import Checkout from './Pages/Checkout/Checkout'
 
 function App() {
 
@@ -89,7 +88,6 @@ function App() {
           <Route path='/cart' element={<Cart cart={cart} minusItem={minusItem} plusItem={plusItem}
             addFunc={addFunc} cartItemNum={cartItemNum} cartTotalPrice={cartTotalPrice} delItem={delItem} ProductList={ProductList} />} />
           <Route path='/recipe' element={<Recipe />} />
-          <Route path='/checkout' element={<Checkout cart={cart} cartItemNum={cartItemNum} cartTotalPrice={cartTotalPrice} clearCart={clearCart}/>} />
         </Routes>
         <Footer />
       </div>
